@@ -17,3 +17,5 @@ variable "env" {
    default = "noname"
   
 }
+variable "user_data" {}
+  
