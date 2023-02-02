@@ -4,7 +4,7 @@ resource "aws_launch_template" "templ" {
       name = "jaks-templ"
       image_id = data.aws_ami.ubuntu.id
       instance_type = var.instance_type //"t2.micro"
-      user_data = base64encode(file("../../modules/autoscaling/userdata.sh"))
+      user_data = base64encode(file("../autoscaling/userdata.sh"))
 
   network_interfaces {
       associate_public_ip_address = true
